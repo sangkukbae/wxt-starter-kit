@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "entrypoints",
+    "components",
+    "lib",
+    "tests",
+    "types",
+    "wxt.config.ts",
+    "tailwind.config.ts",
+    "vitest.config.ts",
+    "postcss.config.cjs",
+    ".eslintrc.cjs"
+  ]
+}

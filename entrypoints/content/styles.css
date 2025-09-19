@@ -1,0 +1,96 @@
+:host {
+  all: initial;
+}
+
+.wxt-starter.shadow-panel {
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  min-width: 280px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(14, 25, 40, 0.12);
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.wxt-starter.shadow-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.wxt-starter.shadow-panel header strong {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.wxt-starter.shadow-panel .badge {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(14, 116, 144, 0.08);
+  color: rgba(14, 116, 144, 1);
+}
+
+.wxt-starter.shadow-panel section {
+  display: grid;
+  gap: 6px;
+}
+
+.wxt-starter.shadow-panel h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.wxt-starter.shadow-panel p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.wxt-starter.shadow-panel p.empty {
+  color: rgba(15, 23, 42, 0.35);
+  font-style: italic;
+}
+
+.wxt-starter.shadow-panel .toast {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: rgba(37, 99, 235, 1);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  animation: fade-in-out 2.4s ease;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}

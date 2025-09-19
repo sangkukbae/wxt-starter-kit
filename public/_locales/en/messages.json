@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "WXT Starter Extension"
+  },
+  "extensionDescription": {
+    "message": "Modern Chrome extension starter template powered by WXT, React, and TypeScript."
+  }
+}

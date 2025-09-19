@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./.wxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@components/*": ["./components/*"],
+      "@lib/*": ["./lib/*"],
+      "@assets/*": ["./assets/*"],
+      "@entry/*": ["./entrypoints/*"],
+      "@tests/*": ["./tests/*"]
+    },
+    "types": ["chrome", "vitest", "vite/client"]
+  },
+  "include": [
+    "entrypoints",
+    "components",
+    "lib",
+    "tests",
+    "types",
+    "wxt.config.ts",
+    "tailwind.config.ts",
+    "postcss.config.cjs",
+    "vite.config.ts"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "WXT 스타터 익스텐션"
+  },
+  "extensionDescription": {
+    "message": "WXT, React, TypeScript 기반의 최신 크롬 익스텐션 스타터 템플릿입니다."
+  }
+}

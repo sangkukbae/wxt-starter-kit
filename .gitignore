@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.wxt/
+.env.local
+.env*
+*.log
+coverage/
+.vscode/
+.DS_Store
+*.zip
+.output/
