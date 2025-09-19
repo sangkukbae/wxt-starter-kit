@@ -11,6 +11,7 @@ interface UiController {
 }
 
 export async function createShadowRootUI(ctx: ContentScriptContext): Promise<UiController> {
+  const mountNodes = new WeakMap<Root, HTMLElement>();
   const control: {
     setSelection: (value: string) => void;
     toast: (text: string) => void;
@@ -51,12 +52,21 @@ export async function createShadowRootUI(ctx: ContentScriptContext): Promise<UiC
     position: 'inline',
     mode: 'open',
     onMount: (container) => {
-      const root = createRoot(container);
+      const mountNode = document.createElement('div');
+      container.append(mountNode);
+
+      const root = createRoot(mountNode);
+      mountNodes.set(root, mountNode);
+
       root.render(<App />);
       return root;
     },
     onRemove: (root) => {
-      root?.unmount();
+      if (!root) return;
+
+      root.unmount();
+      mountNodes.get(root)?.remove();
+      mountNodes.delete(root);
     },
   });
 
